@@ -1,0 +1,29 @@
+ <!DOCTYPE html>
+		<html>
+			<head>
+			<meta charset='utf-8'>
+			<title>INGRESAR</title>
+			<script src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+			<!-- <script src="jquery.js"></script>NOMBRE DE LA RUTA -->
+			<script>
+				$(document).ready(function(){
+					$("#enviar").click(function(){
+						var usua=$("#usu").val();
+						var cont=$("#con").val();
+						$.post("val.php",{usu:usua,con:cont}, function(datos){
+						$("#resultado").html(datos);
+					});
+					});
+					});
+			
+			</script>
+			</head>
+			<body>
+			
+				USUARIO<input type='text' name='usu' id='usu' placeholder='Ingresa Usuario'><br/>
+				CONTRASEÑA<input type='password' name='con' id='con'><br/>
+				<input type='submit' name='enviar' id='enviar'value='Iniciar Sesion' ><br/>
+				<div id='resultado'></div>
+ </body>
+		</html>
+		

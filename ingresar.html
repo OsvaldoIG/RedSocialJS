@@ -1,29 +1,62 @@
- <!DOCTYPE html>
-		<html>
-			<head>
-			<meta charset='utf-8'>
-			<title>INGRESAR</title>
-			<script src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
-			<!-- <script src="jquery.js"></script>NOMBRE DE LA RUTA -->
-			<script>
-				$(document).ready(function(){
-					$("#enviar").click(function(){
-						var usua=$("#usu").val();
-						var cont=$("#con").val();
-						$.post("val.php",{usu:usua,con:cont}, function(datos){
-						$("#resultado").html(datos);
-					});
-					});
-					});
-			
-			</script>
-			</head>
-			<body>
-			
-				USUARIO<input type='text' name='usu' id='usu' placeholder='Ingresa Usuario'><br/>
-				CONTRASEÑA<input type='password' name='con' id='con'><br/>
-				<input type='submit' name='enviar' id='enviar'value='Iniciar Sesion' ><br/>
-				<div id='resultado'></div>
- </body>
-		</html>
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset='utf-8'>
+		<title>INGRESAR</title>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<script src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
+		<!-- <script src="jquery.js"></script>NOMBRE DE LA RUTA -->
 		
+		<script>
+			$(document).ready(function(){
+				$("#enviar").click(function(){
+					var usua=$("#usu").val();
+					var cont=$("#con").val();
+					$.post("val.php",{usu:usua,con:cont}, function(datos){
+					$("#resultado").html(datos);
+				});
+				});
+				});
+		</script>
+	</head>
+	
+	<body>
+	
+	    <header>
+		    <div class="navbar-fixed">
+                <nav class="blue darken-4">
+                    <div class="nav-wrapper">
+                        <h4>Red social JS</h4>
+                    </div>
+                </nav>
+            </div>
+		</header>
+		
+		<main>
+	        <div class="container">
+			    <div class="row">
+					<div class="col s8 m7 l6 xl4" class="center-align">
+						<h4 class="blue-text text-darken-4">Iniciar Sesión</h4>
+						<ul class="collapsible" data-collapsible="accordion">
+							<li>
+						        <div class="collapsible-header"><i class="material-icons blue-text text-darken-4">perm_identity</i>Usuario</div>
+								<div class="collapsible-body"><input type='text' name='usu' id='usu' placeholder='Nombre de usuario'><br/></div>
+							</li>
+							<li>
+								<div class="collapsible-header"><i class="material-icons blue-text text-darken-4">vpn_key</i>Contraseña</div>
+							    <div class="collapsible-body"><input type='password' name='con' id='con'><br/></div>
+							</li>
+					    </ul>
+					    <button class="btn waves-effect waves-light blue darken-4" type="submit" name="enviar">Iniciar Sesión
+                            <i class="material-icons right">input</i>
+                        </button>
+				    </div>
+				</div>
+	        </div>
+		    <div id='resultado'></div>
+	    </main>
+		
+    </body>
+</html>	

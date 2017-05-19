@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+		<html>
+			<head>
+			<meta charset='utf-8'>
+			<title>INGRESAR</title>
+			<script src='jquery-3.2.1.min.js'></script>
+			<!-- <script src="jquery.js"></script>NOMBRE DE LA RUTA -->
+			
+			</head>
+			<body>
+			
+				USUARIO<input type='text' name='usu' id='usu' placeholder='Ingresa Usuario'><br/>
+				CONTRASEÑA<input type='text' name='con' id='con'><br/>
+				<input type='submit' name='enviar' id='enviar' value='Iniciar Sesion' ><br/>
+				<p id='resultado'></p>
+				<div id='resultado2'></div>
+				
+				<a href="up.html" hidden="hidden">
+				   <button id="pru"></button>
+				</a>
+				
+				<script>
+					/*$(document).ready(function(){
+						$("#enviar").click(function(){
+							var usua=$("#usu").val();
+							var cont=$("#con").val();
+							 $.post("val.php",{usu:usua,con:cont}, function(datos){ 
+							 $('#resultado').html(datos);
+							 //document.getElementById("resultadp").innerHTML =person.firstName + " is " + person.age + " years old.";
+						 });
+						/*$.post("imusu.php",{usu:usua}, function(datos){
+							$('#resultado2').html(datos);
+						});
+						});
+						});*/
+						
+						var usua="";
+						var cont="";
+						
+						$("#enviar").click(function(){
+							$.ajax({
+								url:"val.php",
+								type:"POST",
+								beforeSend: function(){
+									alert("va bien")
+									/*if validar????
+									//redireccionar a la pag principal
+									else
+										preventDefault();*/
+								},
+								data:{
+									usua:$("#usu").val(),
+									cont:$("#con").val()
+								},
+								success: function(result){
+									if((result).length<4)
+										$( "#pru" ).trigger( "click" );
+									else
+										$('#resultado').html(result);
+									//$('#resultado').html(datos);
+									
+								}
+							});
+							
+							
+							
+							
+						});
+						
+			</script>
+		</body>
+		</html>

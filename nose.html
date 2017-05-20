@@ -15,42 +15,29 @@
 				<p id='resultado'></p>
 				<div id='resultado2'></div>
 				
-				<a href="up.html" hidden="hidden">
+				<a href="llora.php" hidden="hidden">
 				   <button id="pru"></button>
 				</a>
 				
 				<script>
-					/*$(document).ready(function(){
-						$("#enviar").click(function(){
-							var usua=$("#usu").val();
-							var cont=$("#con").val();
-							 $.post("val.php",{usu:usua,con:cont}, function(datos){ 
-							 $('#resultado').html(datos);
-							 //document.getElementById("resultadp").innerHTML =person.firstName + " is " + person.age + " years old.";
-						 });
-						/*$.post("imusu.php",{usu:usua}, function(datos){
-							$('#resultado2').html(datos);
-						});
-						});
-						});*/
-						
 						var usua="";
 						var cont="";
-						
+						var a=0;
 						$("#enviar").click(function(){
 							$.ajax({
 								url:"val.php",
 								type:"POST",
-								beforeSend: function(){
-									alert("va bien")
-									/*if validar????
-									//redireccionar a la pag principal
-									else
-										preventDefault();*/
-								},
 								data:{
 									usua:$("#usu").val(),
-									cont:$("#con").val()
+									cont:$("#con").val(),
+									che:a
+								},
+								beforeSend: function(){
+									alert("va bien")
+									if (usua.match(/^[A-z]$/))
+										a=1;
+									else
+										event.preventDefault();
 								},
 								success: function(result){
 									if((result).length<4)
@@ -62,8 +49,7 @@
 								}
 							});
 							
-							
-							
+										
 							
 						});
 						

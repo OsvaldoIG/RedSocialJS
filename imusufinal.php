@@ -104,10 +104,11 @@ echo "<!DOCTYPE html>
 					$filac=mysqli_fetch_assoc($resc);
 			}
 			
-				echo "<a class='waves-effect waves-light btn-large white blue-text text-darken-4'><i class='material-icons left blue-text text-darken-4'>thumb_up</i>me gusta</a>
-            <a class='waves-effect waves-light red btn-large white red-text text-darken-4'><i class='material-icons left red-text text-darken-4'>thumb_down</i>me disgusta</a>
-				<div id='infousuco".$filap["id_publicacion"]."' style='background-color:gray;'></div>
+				echo "<div id='infousuco".$filap["id_publicacion"]."' style='background-color:gray;'></div>
 				<div id='comentario".$filap["id_publicacion"]."' style='background-color:gray;'></div>
+				<a class='waves-effect waves-light btn-large white blue-text text-darken-4'><i class='material-icons left blue-text text-darken-4'>thumb_up</i>me gusta</a>
+            			<a class='waves-effect waves-light red btn-large white red-text text-darken-4'><i class='material-icons left red-text text-darken-4'>thumb_down</i>me disgusta</a>
+				
 				COMENTAR<input type='text' name='come' id='come".$filap["id_publicacion"]."' placeholder='Ah mira'>
 				<input type='submit' value='Comentar' id='botco".$filap["id_publicacion"]."' class='dormir btn waves-effect waves-light blue darken-4'><br/><br/>";
 				if($pubmas<$filap["id_publicacion"])

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+		<html>
+			<head>
+			<meta charset='utf-8'>
+			<title>INGRESAR</title>
+			<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<script src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
+			<!-- <script src="jquery.js"></script>NOMBRE DE LA RUTA -->
+			<script>
+			$(document).ready(function(){
+			    $('#preload').hide();
+				$("#enviar").click(function(){
+					var usua=$("#usu").val();
+					var cont=$("#con").val();
+					$.post("valfinal.php",{usu:usua,con:cont}, function(datos){
+					$("#resultado").html(datos);
+				});
+				});
+				});
+			</script>
+			</head>
+			<body>
+			<header>
+		    <div class="navbar-fixed">
+                <nav class="blue darken-4">
+                    <div class="nav-wrapper">
+                        <svg height='180' width='180'  viewBox='0 0 400 400'>
+                            <defs>
+                                <linearGradient id='grad3' x1='0' y1='0%' x2='100%' y2='0%'>
+                                    <stop offset='0%' style='stop-color:rgb(255,255,255);stop-opacity:1' />
+                                    <stop offset='100%' style='stop-color:rgb(255,255,255);stop-opacity:1' />
+                                </linearGradient>
+                            </defs>
+                            <ellipse cx='200' cy='70' rx='85' ry='55' fill='url(#grad3)' />
+                            <text fill='#0d47a1' font-size='30' font-family='Aharoni' x='127' y='80'>
+                            COYORED</text>
+                        </svg>
+                    </div>
+                </nav>
+            </div>
+		</header>
+		<main>
+	        <div class="container">
+			    <div class="row">
+					<div class="col s8 m7 l6 xl4 offset-s2 offset-m2 offset-l3 offset-xl4">
+					    <svg version='1.0' xmlns='http://www.w3.org/2000/svg'
+                    width='400.000000pt' height='400.000000pt' viewBox='0 0 400.000000 400.000000'
+                    preserveAspectRatio='xMidYMid meet ' id='preload'>
+
+                            <g transform='translate(0.000000,400.000000) scale(0.100000,-0.100000)'
+                            fill='#000000' stroke='none'>
+                                <path d='M580 3992 c0 -5 -17 -21 -37 -35 -21 -15 -136 -120 -255 -233 -149
+                                -141 -223 -219 -237 -248 -27 -55 -28 -125 -1 -159 25 -31 80 -51 120 -42 46
+                                10 223 171 281 256 64 93 93 125 148 160 59 38 96 37 181 -6 69 -35 113 -44
+                                125 -25 9 14 -16 55 -87 146 -34 45 -81 107 -103 138 -39 54 -41 56 -87 56
+                                -27 0 -48 -4 -48 -8z'/>
+                                <path d='M1289 3371 c-48 -16 -66 -30 -84 -67 -21 -44 -14 -92 19 -123 21 -20
+                                35 -22 152 -25 71 -2 183 -11 249 -20 66 -9 172 -23 235 -32 245 -33 407 -74
+                                475 -119 20 -14 40 -25 46 -25 15 0 81 -44 133 -89 26 -23 60 -47 74 -55 66
+                                -34 320 -96 392 -96 45 0 310 -37 400 -56 188 -40 283 -89 323 -168 20 -39 20
+                                -39 1 -75 -23 -44 -98 -95 -167 -116 -29 -9 -113 -25 -187 -36 -251 -37 -510
+                                -125 -955 -324 -144 -64 -176 -79 -365 -168 -436 -205 -990 -824 -990 -1107 0
+                                -67 17 -95 74 -121 50 -23 82 -23 166 0 l65 17 80 159 c131 260 240 419 395
+                                576 143 144 237 208 587 400 373 205 542 271 753 294 108 11 279 56 455 119
+                                55 19 171 81 214 113 47 34 68 59 91 108 39 80 18 312 -33 365 -41 45 -208
+                                104 -322 114 -38 4 -146 11 -240 16 -196 12 -306 32 -533 99 -45 13 -130 62
+                                -222 126 -41 28 -89 59 -107 68 -44 23 -266 105 -333 123 -100 28 -214 55
+                                -265 64 -27 5 -113 21 -190 35 -150 27 -344 40 -386 26z'/>
+                                <path d='M2265 2960 c-11 -4 -30 -19 -41 -32 -19 -23 -31 -26 -131 -32 -92 -6
+                                -116 -4 -145 10 -33 15 -37 15 -76 -5 -68 -35 -114 -80 -110 -110 5 -43 46
+                                -50 313 -50 221 -1 243 1 272 19 64 39 84 131 38 174 -14 13 -39 26 -56 30
+                                -37 7 -38 7 -64 -4z'/>
+                                <path d='M3500 1524 c-325 -35 -565 -133 -714 -295 -104 -112 -163 -237 -197
+                                -414 -59 -309 26 -563 236 -706 101 -70 170 -89 312 -89 303 0 476 121 528
+                                    370 40 189 0 372 -104 479 -61 62 -133 96 -264 122 -98 19 -117 20 -185 9 -42
+                                -7 -101 -23 -130 -36 -30 -13 -58 -24 -63 -24 -16 0 -10 24 25 95 84 174 231
+                                306 436 392 79 33 204 73 228 73 7 0 12 6 10 13 -5 12 -56 17 -118 11z m-263
+                                -655 c119 -44 208 -192 220 -365 14 -193 -63 -349 -191 -386 -116 -34 -233 -3
+                                -306 79 -43 50 -94 149 -109 213 -23 98 -6 357 25 391 24 26 82 56 131 68 54
+                                13 197 13 230 0z'/>
+                                <animate attributeType='CSS' attributeName='opacity' from='1' to='0' dur='1s' repeatCount='indefinite' />
+                            </g>
+                        </svg>
+						<div id="lb">
+						<h4 class="blue-text text-darken-4">Iniciar Sesión</h4>
+						<ul class="collapsible" data-collapsible="accordion">
+							<li>
+							<div class="collapsible-header"><i class="material-icons blue-text text-darken-4">perm_identity</i>Usuario</div>
+							<div class="collapsible-body"><input type='text' name='usu' id='usu' class="blue-text text-darken-4" placeholder='Nombre de usuario'><br/></div>
+							</li>
+							<li>
+								<div class="collapsible-header"><i class="material-icons blue-text text-darken-4">vpn_key</i>Contraseña</div>
+							    <div class="collapsible-body"><input type='password' class="blue-text text-darken-4" name='con' id='con'><br/></div>
+							</li>
+							</ul>
+					    <button class="btn waves-effect waves-light blue darken-4" type="submit" name="enviar" id='enviar'>Iniciar Sesión
+                            <i class="material-icons right">input</i>
+                        </button>
+						</div>
+				    </div>
+				</div>
+	        </div>
+				<div id='resultado'></div>
+				<div id='resultado2'></div>
+				<a href="imusufinal.php" hidden="hidden">
+				   <button id="pru"></button>
+				</a>
+</main>
+    </body>
+</html>				
+				<script>
+						var usua="";
+						var cont="";
+						var a=0;
+						
+						$("#enviar").click(function(){
+							$.ajax({
+								url:"valfinal.php",
+								type:"POST",
+								data:{
+									usua:$("#usu").val(),
+									cont:$("#con").val(),
+									che:a
+								},
+								beforeSend: function(){
+									
+									if (usua.match(/^[A-z]$/))
+										a=1;
+									else
+										event.preventDefault();
+								},
+								success: function(result){
+									if((result).length<4)
+									{
+										$( "#pru" ).trigger( "click" );
+										$('#preload').show();
+										$('#lb').hide();
+										var cdt = setInterval(function() {
+																var time = 5;
+																var seconds = Math.floor((time % (1000 * 60)) / 1000);
+																if (time < 0) {
+																	clearInterval(cdt);
+																}
+															}, 1000);
+									}
+									else
+										$('#resultado').html(result);
+									//$('#resultado').html(datos);
+									
+										
+								}
+							});
+							
+										
+							
+						});
+						
+			</script>

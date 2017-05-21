@@ -14,7 +14,7 @@
 		if($fila==NULL)
 		{
 			if($che==0)
-				echo "TU USUARIO NO ESTÁ REGISTRADO";
+				echo "USUARIO y/o CONTRASEÑA INVALIDOS";
 			else
 				echo "SOLO SE ACEPTAN LETRAS EN USUARIO";
 		}

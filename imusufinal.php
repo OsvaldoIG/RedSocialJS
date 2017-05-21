@@ -2,7 +2,7 @@
 SESSION_START();
 echo "<!DOCTYPE html>
 		<html>
-			<head>
+			<head>imusufinal
 			<meta charset='utf-8'>
 			<title>COYORED</title>
 			<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css'>
@@ -119,7 +119,7 @@ echo "<!DOCTYPE html>
 		 
 		echo "<script>
 				var amame=9;
-				$(document).on('click',$('#botpu'),function(){
+				$('#botpu').click(function(){
 					var hoy = new Date();
 						var dd = hoy.getDate();
 						var mm = hoy.getMonth()+1;

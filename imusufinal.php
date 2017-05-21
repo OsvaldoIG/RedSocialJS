@@ -140,7 +140,7 @@ echo "<!DOCTYPE html>
 						
 						var text=$('#publi').val();
 							
-								$.post('imusu.php',{text:text}, function(){
+								$.post('imusufinal.php',{text:text}, function(){
 									/*var t=('<div>');
 									t.attr('value','crear <elemento');
 									$('.public').append(t).prepend('".$usp."'+'    '+hoy+'<br/>');*/
@@ -202,7 +202,7 @@ echo "<!DOCTYPE html>
 								window.alert('CAMPO VACIO');
 							}
 						else
-						{	$.post('imusu.php',{textc:textc}, function(){
+						{	$.post('imusufinal.php',{textc:textc}, function(){
 							$('#comentario'+cont).append('".$usp."'+'('+hoy+')'+'<br/>');
 							$('#comentario'+cont).append(textc+'<br/>');
 							});
